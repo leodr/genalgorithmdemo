@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</head>
+
+<body>
+    <div id="upper">Das "Traveling Salesman"-Problem</div>
+    <div id="lower">
+        <div id="leftpanel">
+            <canvas id="canvas" width="400px" height="400px"></canvas>
+        </div>
+        <div id="rightpanel">
+            <div id="scalingoptions">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="scaling"  value="10">
+                    <label class="mdl-textfield__label" for="scaling">Skalierung</label>
+                    <span class="mdl-textfield__error">NaN</span>
+                </div>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                    onclick="rescale()" id="button">
+                    Neu Skalieren
+                </button>
+            </div>
+
+            <div id="algorithm">
+                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                    <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
+                    <span class="mdl-radio__label">Brute Force</span>
+                </label>
+                <canvas width="30px" height="10px"></canvas>
+                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                    <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+                    <span class="mdl-radio__label">Genetischer Algorithmus</span>
+                </label>
+            </div>
+
+            <form action="#" id="form">
+                <div class="column">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="amount" value="10">
+                        <label class="mdl-textfield__label" for="amount">Anzahl der Punkte</label>
+                        <span class="mdl-textfield__error">NaN</span>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="gencount">
+                        <label class="mdl-textfield__label" for="gencount">Generation count</label>
+                        <span class="mdl-textfield__error">NaN</span>
+                    </div>
+                </div>
+                <div class="column">
+
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="popcount" value="50">
+                        <label class="mdl-textfield__label" for="popcount">Größe der Generationen</label>
+                        <span class="mdl-textfield__error">NaN</span>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="mutchance" value="0.02">
+                        <label class="mdl-textfield__label" for="mutchance">Mutationschance</label>
+                        <span class="mdl-textfield__error">NaN</span>
+                    </div>
+                </div>
+            </form>
+
+            <div id="buttonbar">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                    onclick="generatePoints()" id="button">
+                    Generieren
+                </button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                    onclick="handleGo()" id="button">
+                    Los!
+                </button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                    onclick="clearCanvas()" id="button">
+                    Canvas leeren
+                </button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                    onclick="location.reload()" id="button">
+                    Zurücksetzen
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

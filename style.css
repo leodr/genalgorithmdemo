@@ -1,0 +1,81 @@
+* {
+    font-family: 'Roboto';
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background: linear-gradient(0deg, #ffffff 20%, rgb(138, 214, 204) 20%);
+}
+
+#upper {
+    background-color: rgb(138, 214, 204);
+    height: 10%;
+    padding-left: 10%;
+    padding-top: 5%;
+    color: white;
+    font-family: 'Product Sans';
+    font-weight: bold;
+    font-size: 3.4em;
+}
+
+#canvas {
+    display: block;
+    margin: 10px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+#lower {
+    background-color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 500px;
+    border-top-left-radius: 75px;
+    border-top-right-radius: 75px;
+    padding-top: 5%;
+    box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.1);
+}
+
+#leftpanel {
+    width: 49%;
+    float: left;
+}
+
+#algorithm {
+    padding: auto;
+    margin: auto;
+}
+
+#scalingoptions {
+    padding: 10px;
+    margin: 0;
+}
+
+#rightpanel {
+    width: 49%;
+    float: right;
+}
+
+.column {
+    float: left;
+    width: 40%;
+    overflow: auto;
+    padding: 10px;
+}
+
+#buttonbar {
+    margin: auto;
+    width: auto;
+}
+
+#button:hover {
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+}
+
+#button {
+    background-color: rgb(138, 214, 204);
+    color: white;
+}
